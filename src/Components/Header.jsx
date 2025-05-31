@@ -2,8 +2,8 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header>
-      <h1>Reactjs Blog</h1>
+    <header className='bg-amber-300 p-3'>
+      <h1 className='text-xl font-medium text-amber-900'>Reactjs Blog</h1>
     </header>
   )
 }
