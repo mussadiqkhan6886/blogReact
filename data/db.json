@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": "2",
+      "title": "My Second Post",
+      "datetime": "July 02, 2021 11:17:26 AM",
+      "body": "lorem ipsum dolar sit amet consectur aduptna adnau asdajsn  asdpjri dvffiirr dajno aoudnioand aisdn asodjasond"
+    },
+    {
+      "id": "3",
+      "title": "My Third Post",
+      "datetime": "July 03, 2021 11:17:26 AM",
+      "body": "lorem ipsum dolar sit amet consectur aduptna adnau asdajsn  asdpjri dvffiirr dajno aoudnioand aisdn asodjasond"
+    },
+    {
+      "id": "31",
+      "title": "Edit post ",
+      "datetime": "June 3, 2025 at 9:55:06 AM",
+      "body": "this is Edt pist my new post im giving this post"
+    }
+  ]
+}

@@ -1,9 +1,8 @@
-import React from 'react'
 
 const Header = () => {
   return (
-    <header className='bg-amber-300 p-3'>
-      <h1 className='text-xl font-medium text-amber-900'>Reactjs Blog</h1>
+    <header className='bg-gray-400 p-2 text-center'>
+      <h1 className='text-2xl font-medium text-white'>Reactjs Blog</h1>
     </header>
   )
 }
