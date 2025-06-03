@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Post = ({post}) => {
@@ -8,7 +7,7 @@ const Post = ({post}) => {
                 <h2 className='font-medium hover:underline'>{post.title}</h2>
                 <p className='text-[12px] mb-2'>{post.datetime}</p>
             </Link>
-            <p>{post.body.length >= 25 ? post.body.slice(0,25) + "..." : post.body }</p>
+            <p>{(post.body).length >= 25 ? (post.body).slice(0,25) + "..." : post.body }</p>
     </article>
   )
 }

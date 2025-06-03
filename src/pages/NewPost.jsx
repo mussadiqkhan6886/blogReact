@@ -1,5 +1,39 @@
+import { useState, useEffect, useContext } from "react"
+import { useNavigate } from "react-router-dom"
+import { DataContext } from "../context/DataContext"
+const NewPost = () => {
+  
+  const {posts, post, setPosts, bodyValue, setBodyValue, titleValue, setTitleValue} = useContext(DataContext)
 
-const NewPost = ({handleSubmit, titleValue, setTitleValue, bodyValue, setBodyValue}) => {
+  const nav = useNavigate()
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try{     
+      const now = new Date()
+      const opt = {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true
+      }
+      const id = posts.length ?  String(parseInt(posts[posts.length - 1].id) + 1) : 1
+      const newData = {id, title: titleValue, datetime: now.toLocaleString('en-US', opt), body: bodyValue}
+      const response = await post.post('posts', newData)
+      const allPosts = [...posts, response.data]
+      setPosts(allPosts)
+      setTitleValue('')
+      setBodyValue('')
+    }catch(err){
+      console.log(err)
+    }
+    
+    nav('/')
+  }
+
   return (
     <main className=' p-3 h-[80%] overflow-auto'>
       <h1 className='font-medium text-xl mb-4'>New Post</h1>

@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Feed from '../Components/Feed'
+import { DataContext } from '../context/DataContext'
 
-const Home = ({posts}) => {
+const Home = () => {
+  const {searchResult} = useContext(DataContext)
   return (
     <main className='overflow-auto bg-white h-[80%] p-3'>
-      {posts.length ? (
-          <Feed posts={posts}/>
+      {searchResult.length ? (
+          <Feed posts={searchResult}/>
       ) : (
         <p>No Posts yet...</p>
       )}
