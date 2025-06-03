@@ -16,7 +16,6 @@ export const DataProvider = ({children}) => {
 
   useEffect(() => {
     setPosts(data)
-    console.log(posts)
   }, [data])
   
 
